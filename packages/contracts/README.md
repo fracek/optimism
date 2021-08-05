@@ -165,15 +165,15 @@ npx hardhat etherscan-verify --api-key ... --network ...
 To whitelist deployers on Mainnet you must have the whitelist Owner wallet connected, then run:
 ```bash
 npx hardhat whitelist \
-  --use-ledger true \  # `network` MUST equal your env var `CONTRACTS_TARGET_NETWORK`
-  --contracts-rpc-url https://mainnet.optimism.i \
+  --use-ledger true \
+  --contracts-rpc-url https://mainnet.optimism.io \
   --address ... \ # address to whitelist
 ```
 
 To withdraw ETH fees to L1 on Mainnet, run:
 ```bash
 npx hardhat withdraw-fees \
-  --private-key 0x... \  # The private key to withdraw fees with. Ensure this wallet has ETH on L2 to pay the tx fee.
+  --use-ledger \  # The ledger to withdraw fees with. Ensure this wallet has ETH on L2 to pay the tx fee.
   --contracts-rpc-url https://mainnet.optimism.io \
 ```
 
