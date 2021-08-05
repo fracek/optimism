@@ -73,6 +73,6 @@ task('withdraw-fees')
     } else {
       const withdrawTx = await l2FeeVault.withdraw()
       console.log(`Withdrawal complete: https://optimistic.etherscan.io/tx/${withdrawTx.hash}`)
-      console.log(`Complete withdrawal in 1 week here: https://optimistic.etherscan.io/address/${signerAddress}#withdrawaltxs`)
+      console.log(`Complete withdrawal in 1 week here: https://optimistic.etherscan.io/address/${predeploys.OVM_SequencerFeeVault}#withdrawaltxs`)
     }
   })
